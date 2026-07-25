@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Log Analyzer"
+  short_description: "Verify and publish the public release safely"
+  default_prompt: "Use $release-log-analyzer to validate and publish this repository."

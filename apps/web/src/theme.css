@@ -1,0 +1,41 @@
+/*
+ * Chrome tokens (panels, chat, legend, tooltips) -- adapted from the dataviz skill's
+ * reference palette (chart chrome & ink table). These follow the viewer's OS theme;
+ * they do NOT include the outcome/status colors, which are fixed and mode-invariant
+ * by design (see theme/outcomeColors.ts) and are therefore not redeclared here.
+ */
+:root {
+  color-scheme: light;
+  --surface-0: #f9f9f7; /* page plane */
+  --surface-1: #fcfcfb; /* panel surface */
+  --surface-2: #ffffff; /* raised surface (input fields, chips) */
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --border: rgba(11, 11, 11, 0.1);
+  --gridline: #e1e0d9;
+  --baseline: #c3c2b7; /* chart axis baseline -- one step more visible than gridline */
+  --accent: #2a78d6;
+  --accent-text: #ffffff;
+  --danger: #d03b3b;
+
+  --scene-bg: #1a1a19; /* fixed regardless of theme -- see outcomeColors.ts */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --surface-0: #0d0d0d;
+    --surface-1: #1a1a19;
+    --surface-2: #232322;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --border: rgba(255, 255, 255, 0.1);
+    --gridline: #2c2c2a;
+    --baseline: #4a4a47;
+    --accent: #3987e5;
+    --accent-text: #ffffff;
+    --danger: #e66767;
+  }
+}

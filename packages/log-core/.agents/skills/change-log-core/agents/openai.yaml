@@ -1,0 +1,4 @@
+interface:
+  display_name: "Change Log Core"
+  short_description: "Maintain parser and analytics invariants"
+  default_prompt: "Use $change-log-core to update the shared log engine."

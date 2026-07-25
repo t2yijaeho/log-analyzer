@@ -1,0 +1,162 @@
+.bubble {
+  max-width: 92%;
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.assistant {
+  align-self: flex-start;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.systemSummary {
+  align-self: stretch;
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface-1));
+  border: 1px dashed var(--border);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.toolActivity {
+  margin-bottom: 0.3rem;
+}
+
+.text {
+  min-height: 1.2em;
+}
+
+.text :global(p) {
+  margin: 0.4em 0;
+}
+
+.text :global(p):first-child {
+  margin-top: 0;
+}
+
+.text :global(p):last-child {
+  margin-bottom: 0;
+}
+
+.text :global(ul),
+.text :global(ol) {
+  margin: 0.4em 0;
+  padding-left: 1.3em;
+}
+
+.text :global(li) {
+  margin: 0.15em 0;
+}
+
+.text :global(li) > :global(p) {
+  margin: 0;
+}
+
+.text :global(strong) {
+  font-weight: 700;
+}
+
+.text :global(a) {
+  color: var(--accent);
+  word-break: break-word;
+}
+
+.text :global(code) {
+  font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05em 0.3em;
+}
+
+.text :global(pre) {
+  margin: 0.4em 0;
+  padding: 0.5em 0.6em;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.text :global(pre) :global(code) {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.text :global(blockquote) {
+  margin: 0.4em 0;
+  padding-left: 0.6em;
+  border-left: 2px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.text :global(hr) {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0.5em 0;
+}
+
+.text :global(table) {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 0.4em 0;
+  font-size: 0.95em;
+}
+
+.text :global(th),
+.text :global(td) {
+  border: 1px solid var(--border);
+  padding: 0.25em 0.5em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 0.1em;
+  vertical-align: text-bottom;
+  background: currentColor;
+  opacity: 0.6;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.error {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--danger);
+  font-size: 0.78rem;
+}
+
+.retry {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}

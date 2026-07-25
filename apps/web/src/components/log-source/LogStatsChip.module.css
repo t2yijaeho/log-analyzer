@@ -1,0 +1,40 @@
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.4rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: var(--surface-0);
+  border-bottom: 1px solid var(--border);
+}
+
+.total {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.outcome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.divider {
+  width: 1px;
+  height: 0.9rem;
+  background: var(--border);
+}
+
+.duration {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "fixtures": [
+    {
+      "id": "signal1",
+      "buttonLabel": "Signal 1",
+      "file": "api_signal1.log",
+      "description": "Healthy run: 500 responses",
+      "sourceUrl": "https://raw.githubusercontent.com/uoio8090/api_log/main/api_signal1.log",
+      "sha256": "b16a2bf4356d87c0aa22b5a61ae9ff5ebda20cad95bc0e383da7aa4e25e4491d"
+    },
+    {
+      "id": "signal2",
+      "buttonLabel": "Signal 2",
+      "file": "api_signal2.log",
+      "description": "Degraded run: 40 errors and 30 timeouts",
+      "sourceUrl": "https://raw.githubusercontent.com/uoio8090/api_log/main/api_signal2.log",
+      "sha256": "29f21d69f1f8199e887174e7298f3593190a11e59f88db4a993fd986eaf4d09b"
+    },
+    {
+      "id": "signal3",
+      "buttonLabel": "Signal 3",
+      "file": "api_signal3.log",
+      "description": "Healthy run with a 14.5s p99 latency tail",
+      "sourceUrl": "https://raw.githubusercontent.com/uoio8090/api_log/main/api_signal3.log",
+      "sha256": "2d7270f75c76c67ee4e0c393dbb1aaa82306396fc319c7b789e504caa4d30d3a"
+    }
+  ]
+}

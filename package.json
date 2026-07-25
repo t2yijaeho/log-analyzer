@@ -1,0 +1,39 @@
+{
+  "name": "log-analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive request-lifecycle log analysis with local dashboards and optional AI-assisted investigation.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run build -w @log-analyzer/core && concurrently -n core,api,web -c yellow,cyan,green \"npm run dev -w @log-analyzer/core\" \"npm run dev -w @log-analyzer/api\" \"npm run dev -w @log-analyzer/web\"",
+    "build": "npm run build -w @log-analyzer/core && npm run build -w @log-analyzer/api && npm run build -w @log-analyzer/web",
+    "build:pages": "npm run build -w @log-analyzer/core && npm run build:pages -w @log-analyzer/web",
+    "typecheck": "npm run typecheck -w @log-analyzer/core && npm run typecheck -w @log-analyzer/api && npm run typecheck -w @log-analyzer/web",
+    "test": "npm run test -w @log-analyzer/core && npm run test -w @log-analyzer/api && npm run test -w @log-analyzer/web",
+    "audit": "npm audit --audit-level=moderate",
+    "fixtures:verify": "node scripts/verify-fixtures.mjs",
+    "skills:validate": "node scripts/validate-skills.mjs",
+    "release:check": "node scripts/release-check.mjs",
+    "check": "npm run fixtures:verify && npm run typecheck && npm test && npm run build && npm run audit && npm run skills:validate && npm run release:check",
+    "start": "npm run start -w @log-analyzer/api",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.0.11"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "patch-package": "^8.0.1"
+  },
+  "overrides": {
+    "@hono/node-server": "$@hono/node-server"
+  }
+}

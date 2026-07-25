@@ -1,0 +1,80 @@
+.bar {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  max-width: 34rem;
+}
+
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.playButton {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 4rem;
+}
+
+.playButton:disabled {
+  opacity: 0.5;
+}
+
+.scrubber {
+  flex: 1;
+  accent-color: var(--accent);
+}
+
+.time {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  min-width: 4.5rem;
+}
+
+.speed {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.presets {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.preset,
+.presetActive {
+  flex: 1;
+  border-radius: 6px;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.presetActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}

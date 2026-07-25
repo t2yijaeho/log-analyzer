@@ -1,0 +1,48 @@
+.chip {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.status {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #fab219;
+  flex-shrink: 0;
+}
+
+.status[data-done='true'] {
+  background: #0ca30c;
+}
+
+.caret {
+  margin-left: auto;
+}
+
+.detail {
+  margin: 0;
+  padding: 0.4rem 0.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.68rem;
+  max-height: 12rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text-secondary);
+}

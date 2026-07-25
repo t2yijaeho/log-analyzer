@@ -1,0 +1,33 @@
+{
+  "name": "@log-analyzer/api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express + TypeScript API server for log-analyzer-agent: log fetching/parsing and an OpenAI Agent SDK chat layer over parsed log data.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "cross-env NODE_ENV=test OPENAI_API_KEY=test-key APP_ACCESS_TOKEN=test-access-token node --import tsx --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@log-analyzer/core": "*",
+    "@openai/agents": "^0.13.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.0",
+    "helmet": "^8.3.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.1",
+    "@types/supertest": "^7.2.1",
+    "cross-env": "^10.1.0",
+    "supertest": "^7.2.2",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work on Log API"
+  short_description: "Change the protected log and chat API safely"
+  default_prompt: "Use $work-on-log-api to update and harden the API."

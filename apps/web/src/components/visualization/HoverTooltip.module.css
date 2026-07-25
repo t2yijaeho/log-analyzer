@@ -1,0 +1,47 @@
+.tooltip {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.72rem;
+  color: var(--text-primary);
+  min-width: 15rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.outcome {
+  color: var(--text-primary);
+}
+
+.id {
+  margin-left: auto;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.68rem;
+}
+
+.row {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.anomalies {
+  margin-top: 0.3rem;
+  color: var(--danger);
+  font-weight: 600;
+}

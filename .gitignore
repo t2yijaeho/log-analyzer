@@ -1,0 +1,31 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+.cache/
+.tmp/
+*.tsbuildinfo
+
+# Local test and browser artifacts
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# Local agent/editor settings
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# Logs and operating-system files
+*.log
+!packages/log-core/fixtures/*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
